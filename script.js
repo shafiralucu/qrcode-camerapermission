@@ -53,6 +53,7 @@ play.onclick = () => {
 };
 
 const startStream = async (constraints) => {
+  constraints.video.facingMode = "environment"; //untuk buka kamera belakang
   const stream = await navigator.mediaDevices.getUserMedia(constraints);
   handleStream(stream);
 };
